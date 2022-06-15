@@ -17,9 +17,9 @@ function WalletProvider({children}) {
     async function connectWallet(){
         await tronWeb.request({
             method: 'tron_requestAccounts',
-            params: [{
-                eth_accounts: {}
-            }]
+            // params: [{
+            //     eth_accounts: {}
+            // }]
         })
         setWallet(tronWeb.defaultAddress.base58)
     }
